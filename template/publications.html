@@ -1,0 +1,604 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!--
+	This document provides the basis of a semantically structured web page 
+	authored in XHTML 1.0 Transitional using established Cornell University
+	naming conventions.
+-->
+
+<head>
+	<title>David B. Shmoys - School of Operations Research and Information Engineering, Cornell University</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<meta http-equiv="Content-Language" content="en-us" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	
+<!--
+	All layout and formatting should be controlled through Cascading Stylesheets (CSS).
+	The following link tag should appear in the head of every page in the website. see
+	styles/screen.css.
+-->
+	<link rel="stylesheet" type="text/css" media="screen" href="styles/screen.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+</head>
+
+<body class="twocolumn">
+<a name="top">
+<!--
+	The following link provides a way for people using text-based browsers and
+	screen readers to skip over repetitive navigation elements so that they can 
+	get directly to the content. It is hidden from general users through CSS.
+-->
+<div id="skipnav">
+	<a href="#content">Skip to main content</a></div>
+
+<hr />
+
+<!-- The following div contains the Cornell University logo with unit signature -->
+<div id="cu-identity">
+	<div id="cu-logo">
+		<a id="insignia-link" href="http://www.cornell.edu/"><img src="images/ORIE_3line_red.gif" alt="Cornell University" width="416" height="88" border="0" /></a>
+		<div id="unit-signature-links">
+			<a id="cornell-link" href="http://www.cornell.edu/">Cornell University</a>
+			<a id="unit-link1" href="http://www.orie.cornell.edu">Operations Research and Information Engineering</a>
+			<a id="unit-link2" href="http://www.orie.cornell.edu">Operations Research and Information Engineering</a>		</div>
+	</div>
+	
+<!-- 
+		The search-form div contains a form that allows the user to search 
+		either the unit website or all of cornell.edu directly from the banner.
+	-->
+	<div id="search-form">
+		<form action="#" method="post" enctype="application/x-www-form-urlencoded">
+			<div id="search-input">
+				<label for="search-form-query">SEARCH:</label>
+				<input type="text" id="search-form-query" name="query" value="" size="20" />
+				<input type="submit" id="search-form-submit" name="submit" value="go" />
+			</div>
+
+			<div id="search-filters">
+					<input type="radio" id="search-filters1" name="target" value="unit" checked="checked" />
+					<label for="search-filters1">ORIE</label>
+				
+					<input type="radio" id="search-filters2" name="target" value="cornell" />
+					<label for="search-filters2">Cornell</label>
+					
+					<a href="#">more options</a>			</div>	
+		</form>
+	</div>
+	
+<!-- 
+		The search-form div contains a form that allows the user to search 
+		either pages or people within cornell.edu directly from the banner.
+	<div id="search-form">
+		<form action="http://www.cornell.edu/search/" method="get" enctype="application/x-www-form-urlencoded">
+			<div id="search-input">
+				<label for="search-form-query">SEARCH CORNELL:</label>
+				<input type="text" id="search-form-query" name="q" value="" size="20" />
+				<input type="submit" id="search-form-submit" name="submit" value="go" />
+			</div>
+
+			<div id="search-filters">
+					<input type="radio" id="search-filters1" name="tab" value="" checked="checked" />
+					<label for="search-filters1">Pages</label>
+				
+					<input type="radio" id="search-filters2" name="tab" value="people" />
+					<label for="search-filters2">People</label>
+					
+					<a href="http://www.cornell.edu/search/">more options</a>
+			</div>	
+		</form>
+	</div>
+	-->
+	
+	<!--
+		The search-navigation div contains links that allow the user to search
+		either the unit website or all of cornell.edu.
+		These links will be displayed in the unit signature banner and will
+		be aligned with the right edge of the page.
+	<div id="search-navigation">
+		<ul>
+			<li><a href="#">Search Unit Name</a></li>
+			<li><a href="http://www.cornell.edu/search/">Search Cornell</a></li>
+		</ul>
+	</div>
+	-->
+</div>
+
+<!-- The header div contains the main identity and main navigation for the site -->
+<div id="header">	
+	<!--
+		The navigation div contains the site's main navigation. These
+		links will be displayed in a horizontal, gray navigation bar 
+		under the unit signature banner.
+	-->	
+	<div id="navigation">
+		<ul>
+			<li><a href="new_publications.html">Selected Publications</a></li>		
+			<li><a href="research.html">Research</a></li>
+			<li><a href="new_books.html">Books</a></li>		
+			<li><a href="new_students.html">Current &amp; Former PhD Students</a></li>		
+			<li><a href="http://people.orie.cornell.edu/shmoys/cv-sd.pdf" target="_blank">Vita</a></li>
+			
+		  <!-- More navigation as needed
+			<li><a href="#">Navigation 6</a></li>
+			-->
+						
+		</ul>
+	</div>
+	
+	<hr />
+	
+	<!-- 
+		The identity div contains the name of a main site section
+	-->
+	<div id="identity">
+		<h1></a>David B. Shmoys<br /> School of Operations Research and Information Engineering<br />Department of Computer Science</h1>
+	</div>
+</div>
+
+<hr />
+
+<div id="wrap">
+
+<!-- The content div contains the main content of the page -->
+<div id="content">
+
+	<!--
+		The section-navigation div contains the second level of site navigation.
+		These links appear at the top of the left sidebar of the two-column page.
+	-->
+	<div id="section-navigation">
+		<ul>
+			<li><a href="#sequencing">Sequencing and Scheduling Problems</a></li>
+			<li><a href="#stochastic">Stochastic Optimization Problems</a></li>
+			<li><a href="#facility">Facility Location Problems</a></li>
+			<li><a href="#inventory">Deterministic Inventory Models</a></li>
+			<li><a href="#computational">Computational Sustainability</a></li>
+			<li><a href="#other">Other Selected Papers</a></li>
+			<li><a href="#survey">Selected Survey Papers</a></li>
+			<li><a href="index.html">Shmoys Home</a></li>
+			<li><a href="http://www.orie.cornell.edu" target="_blank">ORIE Home</a></li>
+			<li><a href="http://www.cs.cornell.edu/" target="_blank">CS Home</a></li>
+		</ul>
+	</div>
+	
+	<hr />
+
+	<!--
+		The main div contains the main contents of the page. It will be displayed
+		as the wide right column with the beige background.
+	-->
+	<div id="main">
+		<h2>Books</h2>
+        <p>
+        <ul>
+		<li>D.P. Williamson, D.B. Shmoys. <em>The Design of Approximation Algorithms</em></A>. Cambridge University Press, 2011.</li>
+	<li>K. Aardal, J.K. Lenstra, F. Maffioli, and D.B Shmoys (eds.). <em>Selected Publications of Eugene L. Lawler</em>. CWI, 1999.</li>
+	<li>E.L. Lawler, J.K. Lenstra, A.H.G. Rinnooy Kan, and D.B. Shmoys (eds.). <em>The Traveling Salesman Problem. </em>  Wiley, Chichester, 1985.</li>
+        </ul>
+        </p>
+        <p>See <a href="new_books.html">books page</a> for details.</p>
+<br clear="all" />
+
+<h2>Recent Research Papers</h2> <br />
+
+		<p<a name="sequencing"></a> <h2>Sequencing and Scheduling Problems </h2>
+<ul>
+<li>H.-C. An, R.D. Kleinberg, and D.B. Shmoys.
+"Improving Christofides' algorithm for the s-t path TSP," to appear in Proceedings
+of the 44th Annual ACM Symposium on Theory of Computing, 2012.</li>
+
+<li>M. Cheung and D.B. Shmoys.
+"A primal-dual approximation algorithm for min-sum single-machine scheduling problems,"
+Proceeding of APPROX-RANDOM, 2011, 135-146.</li>
+
+<li> H.-C. An, R.D. Kleinberg, and D.B. Shmoys.
+"Approximation algorithms for the bottleneck asymmetric 
+traveling salesman problem." Proceedings of APPROX-RANDOM, 2010, 1-11.</li>
+
+<li> L.A. Hall, A. S. Schulz, D.B. Shmoys, and J. Wein.
+"Scheduling to minimize average completion time: off-line and on-line
+approximation algorithms". Mathematics of Operations Research 22, 1997, 513-544.
+<A HREF="http://people.orie.cornell.edu/shmoys/swjCj-mor.ps" target="_blank"> .ps version</A>.</li>
+
+<li> F.A. Chudak and D.B. Shmoys. "Approximation algorithms for
+precedence-constrained scheduling problems on parallel machines that
+run at different speeds". J. Algorithms 30, 1999, 323-343.
+[Special issue of selected papers from the 8th Annual
+ACM-SIAM Symposium on Discrete Algorithms.]
+<A HREF="http://people.orie.cornell.edu/shmoys/qprec.ps" target="_blank"> .ps version</A>.</li>
+
+<li> P. Martin and D.B. Shmoys. "A new approach to computing optimal
+schedules for the job-shop scheduling problem". In Proceedings of the
+5th International IPCO Conference, 1996, 389-403.
+<A HREF="http://people.orie.cornell.edu/shmoys/ipco-paper.ps" target="_blank"> paper.ps</A>
+<A HREF="http://people.orie.cornell.edu/shmoys/ipco-tables.ps" target="_blank"> tables.ps</A></li>
+
+<li> L.A. Hall, D.B. Shmoys, and J. Wein.
+"Scheduling to minimize average completion time: off-line and on-line
+algorithms". In the Proceeding of the 7th Annual ACM-SIAM Symposium on Discrete
+Algorithms, 1996, 142-151.</li>
+
+<li> D.B. Shmoys and E. Tardos,  "An approximation algorithm for the
+generalized assignment problem". Mathematical Programming A 62, 1993,
+461-474.</li>
+</ul>
+</p>
+<br clear="all" />
+<p>Return to <a href="#top">top</a>.</p>
+<br clear="all" />
+
+
+<p><a name="stochastic"></a><h2>Stochastic Optimization Problems</h2> <br />
+<ul>
+<li> I. Gorodezky, R.D. Kleinberg, D.B. Shmoys, and G. Spencer.
+Improved Lower Bounds for the Universal and a priori TSP. 
+Proceedings of APPROX-RANDOM, 2010, 178-191.</li>
+
+<li> D.B. Shmoys and K. Talwar.
+"A constant approximation algorithm for the a priori TSP,"
+Proceedings of the 13th MPS
+Conference on Integer Programming and Combinatorial Optimization, 2008,
+331-343.
+<A HREF="http://people.orie.cornell.edu/shmoys/ShmoysTalwar08.pdf" target="_blank">
+.pdf version</A></li>
+
+<li> F. Schalekamp and D.B. Shmoys.
+"Algorithms for the universal and a priori TSP,"
+Operations Research Letters 36, 2008, 1-3.
+<A HREF="http://people.orie.cornell.edu/shmoys/SchalekampShmoysORL.pdf" target="_blank">
+.pdf version</A></li>
+
+<li> R. Levi, R. Roundy, D.B. Shmoys, and V.A. Truong. "Approximation
+algorithms for capacitated stochastic inventory control problems."
+Operations Research 56, 2008, 1186-1199.
+<A HREF="http://people.orie.cornell.edu/shmoys/LeviRoundyShmoysTruong08.pdf" target="_blank">
+.pdf version</A></li>
+
+<li> D.B. Shmoys and M. Sozio.
+"Approximation algorithms for 2-stage stochastic scheduling problems,"
+Proceedings of the 11th MPS
+Conference on Integer Programming and Combinatorial Optimization, 2007,
+145-157.
+<A HREF="http://people.orie.cornell.edu/shmoys/ShmoysSozio07.pdf" target="_blank">
+.pdf version</A></li>
+
+<li> R. Levi, M. Pal, R. Roundy, and D. Shmoys.
+"Approximation algorithms for stochastic inventory control models,"
+Mathematics of Operations Research 32, 2007, 284-302.
+<A HREF="http://people.orie.cornell.edu/shmoys/stoch-inv.pdf" target="_blank">
+.pdf file of journal version</A>
+Preliminary version appeared in
+Proceedings of the 11th MPS
+Conference on Integer Programming and Combinatorial Optimization, 2005,
+306-320.</li>
+
+<li> R. Levi, R. Roundy, and D.B. Shmoys.
+"Provably near-optimal sampling-based policies for stochastic inventory
+control models."
+Mathematics of Operations Research 32, 2007, 821-839.
+<A HREF="http://people.orie.cornell.edu/shmoys/sampling.pdf" target="_blank">
+.pdf file of journal version</A>
+Preliminary version appeared in Proceedings of STOC 2006, 739-748.</li>
+
+<li> D.B. Shmoys and C. Swamy. "An approximation scheme for stochastic linear
+programming and its application to stochastic integer programs."
+Journal of the ACM 53, 2006, 973-1012.
+<A HREF="http://people.orie.cornell.edu/shmoys/ShmoysSwamy05-journal.pdf" target="_blank">
+.pdf of the journal version</A>
+Preliminary version appeared as "Stochastic Optimization is (almost) as
+Easy as Deterministic Optimization" in Proceedings of FOCS 2004, pages 228-237.</li>
+
+<li> C. Swamy and D.B. Shmoys. "Sampling-based approximation algorithms for
+multi-stage stochastic optimization."
+In Proceedings of FOCS 2005, pages 357-366.
+<A HREF="http://people.orie.cornell.edu/shmoys/multistagefnl.ps" target="_blank">
+.ps version</A></li>
+</ul>
+</p>
+<br clear="all" />
+<p>Return to <a href="#top">top</a>.</p>
+<br clear="all" />
+
+
+<p><h2><a name="facility"></a>Facility Location Problems</h2> <br />
+<ul>
+
+<li>T. Carnes and D.B. Shmoys.
+"Primal-dual schema and Lagrangian relaxation for the k-location-routing problem,"
+Proceedings of APPROX-RANDOM, 2011, 99-110.</li>
+
+<li> R. Levi, D.B. Shmoys, and C. Swamy.
+"LP-based approximation algorithms for capacitated facility location," <em>Mathematical
+Programming 131</em>, 2012, 365-379. [Preliminary version appeared in Proceedings of the 10th 
+MPS Conference on Integer Programming and Combinatorial Optimization, 2004, 206-218.]
+<A HREF="http://people.orie.cornell.edu/shmoys/caphfl.ps" target="_blank">
+.ps version</A></li>
+
+<li> C. Swamy and D.B. Shmoys.
+"Fault-tolerant facility location,"
+ACM Transactions on Algorithms 4, 2008.
+<A HREF="http://people.orie.cornell.edu/shmoys/SwamyShmoys08.pdf" target="_blank">
+.pdf file of journal version</A>
+Preliminary version appeared in
+Proceedings 14th Annual ACM-SIAM Symposium on Discrete Algorithms, 2003,
+735-736.</li>
+
+<li> D.B. Shmoys, C. Swamy and R. Levi.
+"Facility location with service installation costs," in
+Proceedings of the 15th Annual ACM-SIAM Symposium on Discrete Algorithms,
+2004, 1081-1090.
+<A HREF="http://people.orie.cornell.edu/shmoys/faclwsic.ps" target="_blank">
+.ps version</A></li>
+
+<li> A. Archer, R. Rajagopalan, D.B. Shmoys.
+"Lagrangian relaxation for the k-median problem: new insights and
+continuity properties," in
+Proceedings of the 11th Annual European Symposium on Algorithms,
+2003, 31--42.
+<A HREF="http://people.orie.cornell.edu/shmoys/kmedian-esa.ps" target="_blank">
+.ps version</A></li>
+
+<li> F.A. Chudak and D.B Shmoys.
+"Improved approximation algorithms for the uncapacitated facility location
+problem". SIAM J. on Computing 33, 2003, 1-25.
+<A HREF="http://people.orie.cornell.edu/shmoys/ChudakShmoys.ps" target="_blank">
+.ps version</A>.</li>
+
+<li> M. Charikar, S. Guha, E. Tardos, and D.B. Shmoys.
+"A constant-factor approximation algorithm for the k-median problem".
+Journal Computer System Sciences 65, 2002, 129-149.
+<A HREF="http://people.orie.cornell.edu/shmoys/kmedian.ps" target="_blank">
+.ps version</A>.</li>
+
+<li> K.I. Aardal, F.A. Chudak, and D.B. Shmoys.
+"Improved approximation algorithms for the k-level facility location
+problem".  Information Processing Letters 72, 1999, 161-167.
+<A HREF="http://people.orie.cornell.edu/shmoys/klevel.ps" target="_blank"> .ps version</A>.</li>
+
+<li> F.A. Chudak and D.B. Shmoys.
+"Improved approximation algorithms for the capacitated facility location
+problem". In the Proceedings of the 10th Annual ACM-SIAM Symposium on Discrete
+Algorithms, 1999, S875-S876.</li>
+</ul>
+</p>
+<br clear="all" />
+<p>Return to <a href="#top">top</a>.</p>
+<br clear="all" />
+
+
+<p><h2><a name="inventory"></a>Deterministic Inventory Models</h2> <br />
+<ul>
+<li> T. Carnes and D.B. Shmoys.
+Primal-Dual Schema for Capacitated Covering Problems,
+Proceedings of the 13th MPS
+Conference on Integer Programming and Combinatorial Optimization, 2008, 288-302.
+<A HREF="http://people.orie.cornell.edu/shmoys/CarnesShmoys08.pdf" target="_blank">
+.pdf version</A></li>
+
+<li> R. Levi, R. Roundy, D.B. Shmoys, and M. Sviridenko.
+"A constant approximation algorithm for the one-warehouse-multi-retailer
+problem,"
+Management Science 54, 2008, 763-776.
+<A HREF="http://people.orie.cornell.edu/shmoys/LeviRoundyShmoysSviridenko08.pdf" target="_blank">
+.pdf file of journal version</A>
+Preliminary version appeared in
+Proceedings of the 15th Annual ACM-SIAM Symposium on Discrete Algorithms,
+2005, 365-374.</li>
+
+<li> R. Levi, R. Roundy, and D.B. Shmoys.
+"Primal-dual algorithms for deterministic inventory problems,"
+Mathematics of Operations Research 31, 2006, 267-284.
+<A HREF="http://people.orie.cornell.edu/shmoys/jrp-journal.pdf" target="_blank">
+.pdf file of journal version</A>
+Preliminary version appeared in
+Proceedings of the 36th Annual Symposium on Theory of Computing, 2004,
+353-362.</li>
+
+<li> R. Levi, J. Geunes, E. Romeijn, and D.B. Shmoys.
+"Inventory and facility-location models with market selection,"
+Proceedings of the 11th MPS
+Conference on Integer Programming and Combinatorial Optimization, 2005, 111-124.
+<A HREF="http://people.orie.cornell.edu/shmoys/market-ipco.ps" target="_blank">
+.ps version</A>.</li>
+</ul>
+</p>
+<br clear="all" />
+<p>Return to <a href="#top">top</a>.</p>
+<br clear="all" />
+
+
+<p><h2><a name="computational"></a>Computational Sustainability</h2> <br />
+<ul>
+<li>D.B. Shmoys and G. Spencer.
+"Approximation algorithms for gragmenting a graph against a stochastically-located threat,"
+to appear in <em>Proceedings of the 9th Annual Workshop on Approximation and Online
+Algorithms</em>.</li>
+
+<li>D. Sheldon, B. Dilkina, A. Elmachtoub, R. Finseth, A. Sabharwal, J. Conrad, C. Gomes, 
+D.B. Shmoys, W. Allen, O. Amundsen and W. Vaughn. "Maximizing Spread of Cascades Using Network
+Design," <em>Proceedings of the 16th Conference on Uncertainty in Artificial Intelligence: 
+UAI2010</em>, 2010</li>
+</ul>
+</p>
+<br clear="all" />
+<p>Return to <a href="#top">top</a>.</p>
+<br clear="all" />
+
+
+<p><h2><a name="other"></a>Other Selected Papers</h2> <br />
+<ul>
+<li> P. Rusmevichientong, Z.-J. Shen, D.B. Shmoys.
+"A PTAS for capacitated sum-of-ratios optimization." 
+Operations Research Letters 37, 2009, 230-238.</li>
+
+<li> C.P. Gomes, R.G. Regis, and D.B. Shmoys.
+"An improved approximation algorithm for the partial latin square extension
+problem".  Operations Research Letters 32, 2004 479-484.  A preliminary version
+appeared in Proceedings 14th Annual ACM-SIAM Symposium on Discrete
+Algorithms, 2003, 832-833.
+<A HREF="http://people.orie.cornell.edu/shmoys/GomesRS03-final.ps" target="_blank">
+.ps version</A>.</li>
+
+<li>  T.J. Vision, D.G. Brown, D.B. Shmoys, R.T. Durrett, and S.D. Tanksley.
+"Selective mapping: A strategy for optimizing the construction of linkage map."
+Genetics 155: 407-420, 2000.
+<A HREF="http://www.genetics.org/cgi/content/abstract/155/1/407" target="_blank">[ABSTRACT]</A></li>
+<li> S.A. Plotkin, D.B. Shmoys, E. Tardos.  "Fast approximation algorithms
+for fractional packing and covering problems".
+Mathematics of Operations Research 20, 1995, 257-301.
+Preliminary version
+appeared in the Proceedings of the 32nd Annual IEEE Symposium on the
+Foundations of Computer Science (1991), 495-504.
+<A HREF="ftp://ftp.orie.cornell.edu/pub/techreps/TR999.ps.Z" target="_blank">
+ORIE TR-999</A>.</li>
+</li>
+
+<li> M.X. Goemans, A.V. Goldberg, S. Plotkin, D.B. Shmoys, E. Tardos, and D.P.
+Williamson. "Improved approximation algorithms for network design
+problems". In the Proceeding of the 5th Annual ACM-SIAM Symposium on Discrete
+Algorithms (1994), 223-232.
+<A HREF="ftp://ftp.orie.cornell.edu/pub/techreps/TR1116.ps.Z" target="_blank">
+ORIE TR-1116</A>.</li>
+</ul>
+<br clear="all" />
+<p>Return to <a href="#top">top</a>.</p>
+<br clear="all" />
+
+
+<p><h2><a name="survey"></a>Selected Survey Papers</h2> <br />
+<ul>
+<li>C. Swamy and D.B. Shmoys.
+"Approximation algorithms for 2-stage stochastic optimization problems."
+In Proceedings in FSTTCS 2006, 5-19.
+<A HREF="http://people.orie.cornell.edu/shmoys/fsttcs-survey.ps" target="_blank"> .pdf file</A>.</li>
+
+<li> D.B. Shmoys.
+"The design and analysis of
+approximation algorithms: facility location as a case study".
+In: Trends in Optimization,
+AMS Proceedings of Symposia in Applied Mathematics 61,
+(S. Hosten, J. Lee, and R. Thomas, eds.), 2004, 85-97.
+<A HREF="http://people.orie.cornell.edu/shmoys/ams-survey.ps" target="_blank"> .ps version</A></li>
+
+<li>D.B. Shmoys. "Approximation algorithms for facility location problems".
+In: Approximation Algorithms for Combinatorial Optimization,
+Lecture Notes in Computer Science 1913,
+(K. Jansen and S. Khuller, eds.), Springer, Berlin, 2000, 27-33.
+<A HREF="http://people.orie.cornell.edu/shmoys/approx00.ps" target="_blank"> .ps version</A>.</li>
+
+<li>D.B. Shmoys. "Using linear programming in the design and analysis of
+approximation algorithms: two illustrative problems". In:
+Approximation Algorithms for Combinatorial Optimization,
+Lecture Notes in Computer Science 1444
+(K. Jansen and J. Rolim, eds.), Springer, Berlin, 1998, 15-32.
+<A HREF="http://people.orie.cornell.edu/shmoys/approx98.ps" target="_blank"> .ps version</A>.</li>
+
+<li>D.B. Shmoys. "[Approximation algorithms for] Cut problems and
+their application to divide-and-conquer".  In:
+Approximation Algorithms for NP-hard Problems, (D.S. Hochbaum, ed.) PWS, 1997,
+192-235.  <A HREF="http://people.orie.cornell.edu/shmoys/multicut.ps" target="_blank"> .ps version
+ </A></li>
+
+<li>A.S. Schulz, D.B. Shmoys, and D.P. Williamson. Approximation
+algorithms. Proc. National Academy of Sciences 94, 1997, 12734-12735.
+<A HREF="http://www.pnas.org/cgi/reprint/94/24/12734.pdf" target="_blank"> .pdf version </A></li>
+
+<li>D.B. Shmoys and E. Tardos, "Computational complexity".
+In: The Handbook of Combinatorics
+(R.L. Graham, M. Grotschel, and L.  Lovasz, eds.), North Holland, 1995,
+1599-1645.  <A HREF="http://people.orie.cornell.edu/shmoys/hoc-comp.ps" target="_blank">
+.ps version </A> <br />
+This was written during the period 1987-1990, and so is not as recent
+a survey as its date suggests. Some pointers to more recent work were
+included in the final stage of publication.</li>
+
+<li> L. Lovasz, D.B. Shmoys and E. Tardos. "Combinatorics in computer
+science". In: The Handbook of Combinatorics (R.L. Graham,
+M.Grotschel, and L. Lovasz, eds.) North Holland, 1995, 2003-2038.
+<A HREF="http://people.orie.cornell.edu/shmoys/hoc-cs.ps" target="_blank"> .ps version </A></li>
+
+<li>D.B. Shmoys. "Computing near-optimal solutions to combinatorial
+optimization problems". In: Combinatorial
+Optimization, (W. Cook, L. Lovasz, and P.D. Seymour, eds.) AMS, 1995, 355-397.
+<A HREF="http://people.orie.cornell.edu/shmoys/dimacs.ps" target="_blank">
+ORIE TR-1120</A>.</li>
+</ul>
+</p>
+<p>Return to <a href="#top">top</a>.</p>
+<br clear="all" />
+
+
+		
+		
+	</div>
+	
+	<hr />
+	
+	<!--
+		The contents of the secondary div are displayed in the left column sidebar
+		below the secondary navigation. Each group of secondary content should be 
+		organized in a secondary-section div, which will pad the content from the 
+		edges of the sidebar and separate it from other content.
+	-->
+	<div id="secondary">
+		<div class="secondary-section">
+		<h2>Contact Information</h2>
+		<p>
+		<strong>David B. Shmoys</strong><br />
+        Cornell University <br />
+		231 Rhodes Hall<br />
+        136 Hoy Road <br />
+		Ithaca, NY 14853<br /><br />
+		(607) 255-9146 - phone<br>
+		(607) 255-9129 - fax<br>
+		</p>
+		</div>
+		
+<!--		<div class="secondary-section">
+			<h2>Related Resources</h2>
+			<ul>
+				<li><a href="#">Integer feugiat lacinia enim.</a></li>
+				<li><a href="#">Nam tincidunt dictum justo.</a></li>
+				<li><a href="#">Donec aliquet pellentesque dolor</a></li>
+				<li><a href="#">Donec blandit commodo diam.</a></li>
+				<li><a href="#">Nunc scelerisque aliquam urna.</a></li>
+				<li><a href="#">Sed rhoncus risus vel dolor.</a></li>
+			</ul>
+		</div>
+ -->		
+		<!--
+			A secondary-photo div contains an image that is as wide as the sidebar 
+			(200px) and a caption paragraph. Note that the secondary-photo should
+			not be within a secondary-section div.
+		-->
+<!--		<div class="secondary-photo">
+			<img src="images/photos/arecibo_dusk.jpg" alt="Arecibo at Dusk" />
+			<p class="caption">
+			Fusce sed eros vel massa sollicitudin pharetra. Ut tellus. Suspendisse ac massa.
+			</p>
+		</div>
+		
+		<div class="secondary-photo">
+			<img src="images/photos/libecafe.jpg" alt="Libe Cafe" />
+			<p class="caption">
+			Quisque mi lorem, facilisis in, elementum ac, bibendum a, augue.
+			</p>
+		</div> -->
+	</div>
+</div>
+</div>
+
+<hr />
+
+<div id="footer">
+<!-- The footer-content div contains the Cornell University copyright -->
+<div id="footer-content">
+	&copy;2012 <a href="http://www.cornell.edu/" target="_blank">Cornell University</a>
+</div>
+</div>
+
+</body>
+</html>
