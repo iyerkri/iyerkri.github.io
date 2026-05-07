@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IE 5545: Decision Analysis</title>
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #172033;
+      --muted: #64748b;
+      --accent: #2563eb;
+      --accent-dark: #1d4ed8;
+      --border: #e2e8f0;
+      --shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.14), transparent 34rem),
+        linear-gradient(180deg, #eef2ff 0%, var(--bg) 22rem);
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: min(1050px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0;
+    }
+
+    .hero {
+      padding: 42px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: white;
+      box-shadow: var(--shadow);
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.1rem, 5vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: -0.05em;
+    }
+
+    .subtitle {
+      margin: 16px 0 0;
+      max-width: 720px;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 1.08rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .pill {
+      padding: 8px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      font-size: 0.92rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 20px;
+      align-items: start;
+    }
+
+    .card {
+      grid-column: span 12;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .card.large {
+      grid-column: span 8;
+    }
+
+    .card.small {
+      grid-column: span 4;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      padding: 22px 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+
+    .count {
+      color: var(--muted);
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    .link-list {
+      list-style: none;
+      margin: 0;
+      padding: 8px;
+    }
+
+    .link-list li + li {
+      border-top: 1px solid var(--border);
+    }
+
+    .link-list a {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      padding: 14px 16px;
+      border-radius: 12px;
+      transition: background 160ms ease, transform 160ms ease, color 160ms ease;
+    }
+
+    .link-list a:hover,
+    .link-list a:focus-visible {
+      background: #eff6ff;
+      color: var(--accent-dark);
+      transform: translateX(2px);
+      outline: none;
+    }
+
+    .title {
+      font-weight: 650;
+    }
+
+    .badge {
+      flex: 0 0 auto;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #e0e7ff;
+      color: #3730a3;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .footer {
+      margin-top: 28px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 820px) {
+      .page {
+        padding: 28px 0;
+      }
+
+      .hero {
+        padding: 28px;
+      }
+
+      .card.large,
+      .card.small {
+        grid-column: span 12;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">Spring 2026</p>
+      <h1>IE 5545: Decision Analysis</h1>
+      <p class="subtitle">Course materials, lecture notes, practice problems, quiz solutions, and worksheets.</p>
+      <div class="meta" aria-label="Course details">
+        <span class="pill">Prof. Krishnamurthy Iyer</span>
+        <span class="pill">20 PDF resources</span>
+      </div>
+    </header>
+
+    <section class="grid" aria-label="Course materials">
+      <article class="card large">
+        <div class="card-header">
+          <h2>Lecture Notes</h2>
+          <span class="count">15 files</span>
+        </div>
+        <ul class="link-list">
+          <li><a href="pdfs/decision-theory.pdf"><span class="title">Decision Theory</span><span class="badge">PDF</span></a></li>
+          <li><a href="pdfs/bayesian-decision-theory.pdf"><span class="title">Bayesian Decision Theory</span><span class="badge">PDF</span></a></li>
+          <li><a href="pdfs/bayesian-inference.pdf"><span class="title">Bayesian Inference</span><span class="badge">PDF</span></a></li>
+          <li><a href="pdfs/value-of-information.pdf"><span class="title">Value of Information</span><span class="badge">PDF</span></a></li>
+          <li><a href="pdfs/static-games-of-complete-information.pdf"><span class="title">Static Games of Complete Information</span><span class="badge">PDF</span></a></li>
+          <li><a href="pdfs/pure-nash-equilibrium.pdf"><span class="title">Pure Nash Equilibrium</span><span class="badge">PDF</span></a></li>
+          <li><a href="pdfs/cournot-competition.pdf"><span class="title">Cournot Competition</span><span class="badge">PDF</span></a></li>
+          <li><a href="pdfs/mixed-strategies.pdf"><span class="title">Mixed Strategies</span><span class="badge">PDF</span></a></li>
+          <li><a href="pdfs/mixed-nash-equilibrium.pdf"><span class="title">Mixed Nash Equilibrium</span><span class="badge">PDF</span></a></li>
+          <li><a href="pdfs/learning-dynamics.pdf"><span class="title">Learning Dynamics</span><span class="badge">PDF</span></a></li>
+          <li><a href="pdfs/zero-sum-games.pdf"><span class="title">Zero-Sum Games</span><span class="badge">PDF</span></a></li>
+          <li><a href="pdfs/dynamic-games.pdf"><span class="title">Dynamic Games</span><span class="badge">PDF</span></a></li>
+          <li><a href="pdfs/subgame-perfectness.pdf"><span class="title">Subgame Perfectness</span><span class="badge">PDF</span></a></li>
+          <li><a href="pdfs/repeated-games.pdf"><span class="title">Repeated Games</span><span class="badge">PDF</span></a></li>
+          <li><a href="pdfs/bayesian-games.pdf"><span class="title">Bayesian Games</span><span class="badge">PDF</span></a></li>
+        </ul>
+      </article>
+
+      <aside class="card small">
+        <div class="card-header">
+          <h2>Final Practice</h2>
+          <span class="count">2 files</span>
+        </div>
+        <ul class="link-list">
+          <li><a href="pdfs/practice-problems-final.pdf"><span class="title">Practice Problems</span><span class="badge">PDF</span></a></li>
+          <li><a href="pdfs/practice-problems-final-solutions.pdf"><span class="title">Solutions</span><span class="badge">PDF</span></a></li>
+        </ul>
+      </aside>
+
+      <aside class="card small">
+        <div class="card-header">
+          <h2>Quiz Solutions</h2>
+          <span class="count">4 files</span>
+        </div>
+        <ul class="link-list">
+          <li><a href="pdfs/quiz-1-solutions.pdf"><span class="title">Quiz 1 Solutions</span><span class="badge">PDF</span></a></li>
+          <li><a href="pdfs/quiz-2-solutions.pdf"><span class="title">Quiz 2 Solutions</span><span class="badge">PDF</span></a></li>
+          <li><a href="pdfs/quiz-3-solutions.pdf"><span class="title">Quiz 3 Solutions</span><span class="badge">PDF</span></a></li>
+          <li><a href="pdfs/quiz-4-solutions.pdf"><span class="title">Quiz 4 Solutions</span><span class="badge">PDF</span></a></li>
+        </ul>
+      </aside>
+
+      <aside class="card small">
+        <div class="card-header">
+          <h2>Worksheets</h2>
+          <span class="count">1 file</span>
+        </div>
+        <ul class="link-list">
+          <li><a href="pdfs/worksheets.pdf"><span class="title">Worksheets</span><span class="badge">PDF</span></a></li>
+        </ul>
+      </aside>
+    </section>
+
+    <p class="footer">Last updated for IE 5545: Decision Analysis, Spring 2026.</p>
+  </main>
+</body>
+</html>
